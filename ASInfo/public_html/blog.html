@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>АСИ Проекты</title>
+        <title>АСИ Блог</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -43,8 +43,8 @@ and open the template in the editor.
                                         <li><a href="#">Агентство</a></li>
                                         <li><a role="button" data-toggle="collapse" href="#submenu" aria-expanded="false" aria-controls="submenu">Услуги</a></li>
                                         <li><a href="#">Инструментарий</a></li>
-                                        <li class="active"><a href="#">Портфолио</a></li>
-                                        <li><a href="#">Блог</a></li>
+                                        <li><a href="#">Портфолио</a></li>
+                                        <li class="active"><a href="#">Блог</a></li>
                                         <li><a href="#">Контакты</a></li>
                                     </ul>
                                 </div>
@@ -143,14 +143,8 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
-                <div class="second-menu">
-                    <nav>
-                        <ul>
-                            <li><a href="#" class="active">Проекты</a></li>
-                            <li><a href="#">Клиенты</a></li>
-                            <li><a href="#">Отзывы</a></li>
-                        </ul>
-                    </nav>
+                <div class="second-menu empty">
+
                 </div>
             </div>
         </header>
@@ -158,94 +152,86 @@ and open the template in the editor.
             <div class="container">
                 <ol class="breadcrumb">
                     <li><a href="#">Главная страница</a></li>
-                    <li class="active"><a href="#">Портфолио</a></li>
                 </ol>
-                <div class="title"><h1>Проекты</h1></div>
-                <div class="filter-block">
-                    <div class="dropdown">
-                        <button id="sector" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Отрасль
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="sector">
-                            <li><a href="#">Отрасль 1</a></li>
-                            <li><a href="#">Отрасль 2</a></li>
-                            <li><a href="#">Отрасль 3</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown">
-                        <button id="client" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Клиент
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="client">
-                            <li><a href="#">Зенит</a></li>
-                            <li><a href="#">Мегафон</a></li>
-                            <li><a href="#">МТС</a></li>
-                            <li><a href="#">Билайн</a></li>
-                            <li><a href="#">Степан разин</a></li>
-                            <li><a href="#">Самсунг</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown">
-                        <button id="method" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Используемые методы
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="method">
-                            <li><a href="#">Используемые методы 1</a></li>
-                            <li><a href="#">Используемые методы 2</a></li>
-                            <li><a href="#">Используемые методы 3</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="project-list">
-                    <div class="project-item">
-                        <div class="project-item-img" style="background: url('images/project-item-img.png') no-repeat transparent"></div>
-                        <div class="project-item-text">
-                            <div class="project-item-text-title">Название проекта</div>
-                            <div class="project-item-text-tags"><span>Отрасль: машиностроение</span><span>Клиент: ооо "Компания"</span></div>
-                            <div class="project-item-text-preview">Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае.</div>
-                            <a class="red-link" role="button" data-toggle="collapse" href="#project-1" aria-expanded="false" aria-controls="project-1">Подробнее о проекте</a>
-                        </div>
-                        <div class="collapse project-full-text" id="project-1">
-                            <div class="inside-project-full-text">
-                                Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента.
-                                Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае.
-                                <a class="red-link" role="button" data-toggle="collapse" href="#project-1" aria-expanded="false" aria-controls="project-1">Свернуть</a>
+                <div class="title"><h1>Блог</h1></div>
+                <div class="blog-page">
+                    <div class="blog-left">
+                        <div class="blog-item">
+                            <div class="blog-item-head">
+                                <div class="blog-item-head-avatar"><img src="images/main-service-item-1.png" alt="" /></div>
+                                <span class="blog-item-head-name">Олег Могилевский</span>
+                                <span class="blog-item-head-date">1  мая 2016</span>
                             </div>
+                            <div class="blog-item-body">
+                                <div class="blog-item-body-img"><img src="images/blog-img.png" alt="" /></div>
+                                <div class="blog-item-body-title"><a href="#">Пять мировых экспертов о возможностях современных технологий в маркетинговых исследованиях для бизнеса</a></div>
+                                <div class="blog-item-body-preview">Аннотация. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента.</div>
+                            </div>
+                            <div class="blog-item-tags"><span>#Методы сбора данных</span><span>#Новые медиа</span><span>#Новые технологии</span><span>#Опрос на планшетах</span></div>
+                        </div>
+                        <div class="blog-item">
+                            <div class="blog-item-head">
+                                <div class="blog-item-head-avatar"><img src="images/main-service-item-1.png" alt="" /></div>
+                                <span class="blog-item-head-name">Олег Могилевский</span>
+                                <span class="blog-item-head-date">1  мая 2016</span>
+                            </div>
+                            <div class="blog-item-body">
+                                <div class="blog-item-body-title"><a href="#">Пять мировых экспертов о возможностях современных технологий в маркетинговых исследованиях для бизнеса</a></div>
+                                <div class="blog-item-body-preview">Аннотация. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента.</div>
+                            </div>
+                            <div class="blog-item-tags"><span>#Методы сбора данных</span><span>#Новые медиа</span><span>#Новые технологии</span><span>#Опрос на планшетах</span></div>
+                        </div>
+                        <div class="blog-item">
+                            <div class="blog-item-head">
+                                <div class="blog-item-head-avatar"><img src="images/main-service-item-1.png" alt="" /></div>
+                                <span class="blog-item-head-name">Олег Могилевский</span>
+                                <span class="blog-item-head-date">1  мая 2016</span>
+                            </div>
+                            <div class="blog-item-body">
+                                <div class="blog-item-body-img"><img src="images/blog-img.png" alt="" /></div>
+                                <div class="blog-item-body-title"><a href="#">Пять мировых экспертов о возможностях современных технологий в маркетинговых исследованиях для бизнеса</a></div>
+                                <div class="blog-item-body-preview">Аннотация. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента.</div>
+                            </div>
+                            <div class="blog-item-tags"><span>#Методы сбора данных</span><span>#Новые медиа</span><span>#Новые технологии</span><span>#Опрос на планшетах</span></div>
+                        </div>
+                        <div class="blog-item">
+                            <div class="blog-item-head">
+                                <div class="blog-item-head-avatar"><img src="images/main-service-item-1.png" alt="" /></div>
+                                <span class="blog-item-head-name">Олег Могилевский</span>
+                                <span class="blog-item-head-date">1  мая 2016</span>
+                            </div>
+                            <div class="blog-item-body">
+                                <div class="blog-item-body-img"><img src="images/blog-img.png" alt="" /></div>
+                                <div class="blog-item-body-title"><a href="#">Пять мировых экспертов о возможностях современных технологий в маркетинговых исследованиях для бизнеса</a></div>
+                                <div class="blog-item-body-preview">Аннотация. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента.</div>
+                            </div>
+                            <div class="blog-item-tags"><span>#Методы сбора данных</span><span>#Новые медиа</span><span>#Новые технологии</span><span>#Опрос на планшетах</span></div>
                         </div>
                     </div>
-                    <div class="project-item">
-                        <div class="project-item-text">
-                            <div class="project-item-text-title">Название проекта</div>
-                            <div class="project-item-text-tags"><span>Отрасль: машиностроение</span><span>Клиент: ооо "Компания"</span></div>
-                            <div class="project-item-text-preview">Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае.</div>
-                            <a class="red-link" role="button" data-toggle="collapse" href="#project-2" aria-expanded="false" aria-controls="project-2">Подробнее о проекте</a>
-                        </div>
-                        <div class="collapse project-full-text" id="project-2">
-                            <div class="inside-project-full-text">
-                                Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента.
-                                Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае.
-                                <a class="red-link" role="button" data-toggle="collapse" href="#project-2" aria-expanded="false" aria-controls="project-2">Свернуть</a>
-                            </div>
-                        </div>                        
-                    </div>
-                    <div class="project-item">
-                        <div class="project-item-img" style="background: url('images/project-item-img.png') no-repeat transparent"></div>
-                        <div class="project-item-text">
-                            <div class="project-item-text-title">Название проекта</div>
-                            <div class="project-item-text-tags"><span>Отрасль: машиностроение</span><span>Клиент: ооо "Компания"</span></div>
-                            <div class="project-item-text-preview">Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае.</div>
-                            <a class="red-link" role="button" data-toggle="collapse" href="#project-3" aria-expanded="false" aria-controls="project-3">Подробнее о проекте</a>
-                        </div>
-                        <div class="collapse project-full-text" id="project-3">
-                            <div class="inside-project-full-text">
-                                Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента.
-                                Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае.
-                                <a class="red-link" role="button" data-toggle="collapse" href="#project-3" aria-expanded="false" aria-controls="project-3">Свернуть</a>
-                            </div>
-                        </div>                        
+                    <div class="blog-right">
+                        <ul>
+                            <li><a href='#'>#Методы сбора данных</a></li> 
+                            <li><a href='#'>#Новые медиа </a></li> 
+                            <li><a href='#'>#Новые технологии </a></li> 
+                            <li><a href='#'>#Опрос на планшетах </a></li> 
+                            <li><a href='#'>#Петербургский барометр </a></li> 
+                            <li><a href='#'>#Полезности </a></li> 
+                            <li><a href='#'>#Результаты исследований </a></li> 
+                            <li><a href='#'>#Санкт-Петербург </a></li> 
+                            <li><a href='#'>#Социология старения </a></li> 
+                            <li><a href='#'>#Статистика </a></li> 
+                            <li><a href='#'>#Строительство </a></li> 
+                            <li><a href='#'>#Судебная система </a></li> 
+                            <li><a href='#'>#Тренды </a></li> 
+                            <li><a href='#'>#Туризм </a></li> 
+                            <li><a href='#'>#Фонтанка.Ру </a></li> 
+                            <li><a href='#'>#ЦФО </a></li> 
+                            <li><a href='#'>#анализ </a></li> 
+                            <li><a href='#'>#маркетинг </a></li> 
+                            <li><a href='#'>#методология </a></li> 
+                            <li><a href='#'>#презентации </a></li> 
+                            <li><a href='#'>#работа</a></li> 
+                        </ul>
                     </div>
                 </div>
             </div>

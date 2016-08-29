@@ -6,11 +6,10 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>АСИ Проекты</title>
+        <title>АСИ Отзывы</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/font-awesome.min.css" />
-        <link rel="stylesheet" href="css/animate.css" />
         <link rel="stylesheet" href="css/bootstrap.css" />
         <link rel="stylesheet" href="css/main.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -146,9 +145,9 @@ and open the template in the editor.
                 <div class="second-menu">
                     <nav>
                         <ul>
-                            <li><a href="#" class="active">Проекты</a></li>
+                            <li><a href="#">Проекты</a></li>
                             <li><a href="#">Клиенты</a></li>
-                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#" class="active">Отзывы</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -160,92 +159,38 @@ and open the template in the editor.
                     <li><a href="#">Главная страница</a></li>
                     <li class="active"><a href="#">Портфолио</a></li>
                 </ol>
-                <div class="title"><h1>Проекты</h1></div>
-                <div class="filter-block">
-                    <div class="dropdown">
-                        <button id="sector" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Отрасль
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="sector">
-                            <li><a href="#">Отрасль 1</a></li>
-                            <li><a href="#">Отрасль 2</a></li>
-                            <li><a href="#">Отрасль 3</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown">
-                        <button id="client" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Клиент
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="client">
-                            <li><a href="#">Зенит</a></li>
-                            <li><a href="#">Мегафон</a></li>
-                            <li><a href="#">МТС</a></li>
-                            <li><a href="#">Билайн</a></li>
-                            <li><a href="#">Степан разин</a></li>
-                            <li><a href="#">Самсунг</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown">
-                        <button id="method" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Используемые методы
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="method">
-                            <li><a href="#">Используемые методы 1</a></li>
-                            <li><a href="#">Используемые методы 2</a></li>
-                            <li><a href="#">Используемые методы 3</a></li>
-                        </ul>
+                <div class="title"><h1>Отзывы</h1></div>
+                <p class="quote">Внедрение передовых международных методик проведения количественных и качественных исследований позволяет Агентству выходить на новые рынки и в течение многих лет удерживать стабильные позиции среди профессиональных исследовательских агентств России.</p>
+                <div class="text-with-img-block">
+                    <div class="img-block"><img src="images/text-block-img.png" alt="" /></div>
+                    <div class="text-block">
+                        <div class="text-block-title">ООО "Воздушные Ворота Северной Столицы" (Аэропорт “Пулково”)</div>
+                        <div class="text-block-text">«В 2011 году ООО Агентство Социальной Информации Санкт-Петербург проводило исследовательские работы для ООО Воздушные Ворота Северной Столицы по оценке актуального состояния внутренней среды Общества и разработке рекомендаций по ее оптимизации. Мы высоко оцениваем работу АСИ Санкт-Петербург, качество проведенных исследовательских работ, их практическую значимость и профессиональное своевременное предоставление всех результатов и отчетных материалов».</div>
+                        <a href="#" class="red-link">Все отзывы</a>
                     </div>
                 </div>
-                <div class="project-list">
-                    <div class="project-item">
-                        <div class="project-item-img" style="background: url('images/project-item-img.png') no-repeat transparent"></div>
-                        <div class="project-item-text">
-                            <div class="project-item-text-title">Название проекта</div>
-                            <div class="project-item-text-tags"><span>Отрасль: машиностроение</span><span>Клиент: ооо "Компания"</span></div>
-                            <div class="project-item-text-preview">Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае.</div>
-                            <a class="red-link" role="button" data-toggle="collapse" href="#project-1" aria-expanded="false" aria-controls="project-1">Подробнее о проекте</a>
-                        </div>
-                        <div class="collapse project-full-text" id="project-1">
-                            <div class="inside-project-full-text">
-                                Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента.
-                                Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае.
-                                <a class="red-link" role="button" data-toggle="collapse" href="#project-1" aria-expanded="false" aria-controls="project-1">Свернуть</a>
-                            </div>
-                        </div>
+                <div class="text-with-img-block">
+                    <div class="img-block"><img src="images/text-block-img.png" alt="" /></div>
+                    <div class="text-block">
+                        <div class="text-block-title">ООО "Воздушные Ворота Северной Столицы" (Аэропорт “Пулково”)</div>
+                        <div class="text-block-text">«В 2011 году ООО Агентство Социальной Информации Санкт-Петербург проводило исследовательские работы для ООО Воздушные Ворота Северной Столицы по оценке актуального состояния внутренней среды Общества и разработке рекомендаций по ее оптимизации. Мы высоко оцениваем работу АСИ Санкт-Петербург, качество проведенных исследовательских работ, их практическую значимость и профессиональное своевременное предоставление всех результатов и отчетных материалов».</div>
+                        <a href="#" class="red-link">Все отзывы</a>
                     </div>
-                    <div class="project-item">
-                        <div class="project-item-text">
-                            <div class="project-item-text-title">Название проекта</div>
-                            <div class="project-item-text-tags"><span>Отрасль: машиностроение</span><span>Клиент: ооо "Компания"</span></div>
-                            <div class="project-item-text-preview">Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае.</div>
-                            <a class="red-link" role="button" data-toggle="collapse" href="#project-2" aria-expanded="false" aria-controls="project-2">Подробнее о проекте</a>
-                        </div>
-                        <div class="collapse project-full-text" id="project-2">
-                            <div class="inside-project-full-text">
-                                Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента.
-                                Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае.
-                                <a class="red-link" role="button" data-toggle="collapse" href="#project-2" aria-expanded="false" aria-controls="project-2">Свернуть</a>
-                            </div>
-                        </div>                        
+                </div>
+                <div class="text-with-img-block">
+                    <div class="img-block"><img src="images/text-block-img.png" alt="" /></div>
+                    <div class="text-block">
+                        <div class="text-block-title">ООО "Воздушные Ворота Северной Столицы" (Аэропорт “Пулково”)</div>
+                        <div class="text-block-text">«В 2011 году ООО Агентство Социальной Информации Санкт-Петербург проводило исследовательские работы для ООО Воздушные Ворота Северной Столицы по оценке актуального состояния внутренней среды Общества и разработке рекомендаций по ее оптимизации. Мы высоко оцениваем работу АСИ Санкт-Петербург, качество проведенных исследовательских работ, их практическую значимость и профессиональное своевременное предоставление всех результатов и отчетных материалов».</div>
+                        <a href="#" class="red-link">Все отзывы</a>
                     </div>
-                    <div class="project-item">
-                        <div class="project-item-img" style="background: url('images/project-item-img.png') no-repeat transparent"></div>
-                        <div class="project-item-text">
-                            <div class="project-item-text-title">Название проекта</div>
-                            <div class="project-item-text-tags"><span>Отрасль: машиностроение</span><span>Клиент: ооо "Компания"</span></div>
-                            <div class="project-item-text-preview">Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае.</div>
-                            <a class="red-link" role="button" data-toggle="collapse" href="#project-3" aria-expanded="false" aria-controls="project-3">Подробнее о проекте</a>
-                        </div>
-                        <div class="collapse project-full-text" id="project-3">
-                            <div class="inside-project-full-text">
-                                Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента.
-                                Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае глубокого погружения в бизнес клиента. Каждый исследовательский проект индивидуален и может быть качественно реализован только в случае.
-                                <a class="red-link" role="button" data-toggle="collapse" href="#project-3" aria-expanded="false" aria-controls="project-3">Свернуть</a>
-                            </div>
-                        </div>                        
+                </div>
+                <div class="text-with-img-block">
+                    <div class="img-block"><img src="images/text-block-img.png" alt="" /></div>
+                    <div class="text-block">
+                        <div class="text-block-title">ООО "Воздушные Ворота Северной Столицы" (Аэропорт “Пулково”)</div>
+                        <div class="text-block-text">«В 2011 году ООО Агентство Социальной Информации Санкт-Петербург проводило исследовательские работы для ООО Воздушные Ворота Северной Столицы по оценке актуального состояния внутренней среды Общества и разработке рекомендаций по ее оптимизации. Мы высоко оцениваем работу АСИ Санкт-Петербург, качество проведенных исследовательских работ, их практическую значимость и профессиональное своевременное предоставление всех результатов и отчетных материалов».</div>
+                        <a href="#" class="red-link">Все отзывы</a>
                     </div>
                 </div>
             </div>

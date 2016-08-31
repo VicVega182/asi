@@ -579,6 +579,9 @@ body {
         margin-bottom: 0;
         padding: 25px 0;
         color: #c4c2c3;
+        @media @mob {
+            padding: 16px;
+        }
         a {
             color: #c4c2c3;
             text-decoration: underline;
@@ -598,6 +601,10 @@ body {
             font-weight: 700;
             line-height: 1.1;
             color: #4a4748;
+            @media @mob {
+                padding: 0 16px;
+                font-size: 30px;
+            }
         }
     }
     .quote {
@@ -605,7 +612,12 @@ body {
         line-height: 1.5;
         color: #4a4748;
         margin-bottom: 25px;
-        padding-right: 15%; 
+        padding-right: 15%;
+        @media @mob {
+            padding-right: 0;
+            font-size: 14px;
+            padding: 0 16px;
+        }
     }
     .dropdown {
         button {
@@ -625,6 +637,11 @@ body {
                 top: 50%;
                 margin-top: -8px;
             }
+            @media @mob {
+                width: 100%;
+                border: none;
+                text-align: left;
+            }
         }
         .dropdown-menu {
             min-width: 220px;
@@ -633,6 +650,9 @@ body {
             border: none;
             box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.17);
             border-radius: 0;
+            @media @mob {
+                min-width: 100%;
+            }
             li {
                 a {
                     color: #4a4748;
@@ -653,14 +673,34 @@ body {
             display: inline-block;
             vertical-align: top;
         }
+        .blog-filter {
+            display: none;
+            @media @mob {
+                display: block;
+                padding: 0 16px 16px;
+                .dropdown {
+                    button {
+                        border: 1px solid #e1e0e0;
+                    }
+                }
+            }
+        }
         .blog-left {
             width: 67.5%;
             padding-right: 4.5%;
             box-sizing: border-box;
+            @media @mob {
+                width: 100%;
+                padding: 0 16px;
+            }
             .blog-item {
                 margin-bottom: 40px;
                 padding-bottom: 40px;
                 border-bottom: 1px solid #e0dfdf;
+                @media @mob {
+                    margin-bottom: 20px;
+                    padding-bottom: 20px;
+                }
                 .blog-item-head {
                     .blog-item-head-avatar {
                         display: inline-block;
@@ -679,14 +719,23 @@ body {
                     .blog-item-head-name {
                         color: #4a4748;
                         margin-right: 20px;
+                        @media @mob {
+                            font-size: 12px;
+                        }
                     }
                     .blog-item-head-date {
                         opacity: 0.4;
                         color: #4a4748;
+                        @media @mob {
+                            font-size: 12px;
+                        }
                     }
                 }
                 .blog-item-body {
                     margin-top: 26px;
+                    @media @mob {
+                        margin-top: 15px;
+                    }
                     .blog-item-body-img {
                         img {
                             width: 100%;
@@ -699,6 +748,11 @@ body {
                             font-weight: 700;
                             line-height: 1.4;
                             color: #4a4748;
+                            @media @mob {
+                                font-size: 14px;
+                                line-height: 1;
+                                font-weight: 400;
+                            }
                             &:hover, &:focus {
                                 outline: none;
                                 color: #cd3050;
@@ -720,6 +774,10 @@ body {
                     margin-top: 20px;
                     span {
                         margin-right: 10px;
+                    }
+                    @media @mob {
+                        font-size: 12px;
+                        margin-top: 0;
                     }
                 }
             }
@@ -750,19 +808,37 @@ body {
     .filter-block {
         letter-spacing: -0.3em;
         margin-bottom: 40px;
+        @media @mob {
+            background: #f5f5f5;
+            .title {
+                font-size: 14px;
+                font-weight: 700;
+                color: #4a4748;
+                padding: 16px 16px 0 16px;
+            }
+        }
         & > div {
             letter-spacing: normal;
             display: inline-block;
             vertical-align: top;
             margin-right: 20px;
+            @media @mob {
+                width: 100%;
+            }
         }
     }
     .project-list {
         padding-right: 15%;
+        @media @mob {
+            padding: 0 16px;
+        }
         .project-item {
             border: 2px solid #dcdbdb;
             padding: 40px;
             margin-bottom: 20px;
+            @media @mob {
+                padding: 20px 16px;
+            }
             &.active-item {
                 box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.1);
                 border: none;
@@ -770,6 +846,9 @@ body {
             .project-item-img, .project-item-text {
                 display: table-cell;
                 vertical-align: middle;
+                @media @mob {
+                    display: block;
+                }
             }
             .project-item-img {
                 width: 140px;
@@ -777,11 +856,18 @@ body {
                 background-size: contain!important;
                 border-right: 40px solid #fff;
                 background-position: center!important;
+                @media @mob {
+                    width: 100%;
+                    padding-right: 0;
+                }
             }
             .project-item-text {
                 .project-item-text-title {
                     font-size: 22px;
                     color: #4a4748;
+                    @media @mob {
+                        text-align: center;
+                    }
                 }
                 .project-item-text-tags {
                     opacity: 0.4;
@@ -789,18 +875,30 @@ body {
                     color: #4a4748;
                     text-transform: uppercase;
                     padding: 10px 0;
+                    @media @mob {
+                        text-align: center;
+                    }
                     span {
                         margin-right: 10px;
+                        @media @mob {
+                            display: block;
+                        }
                     }
                 }
                 .project-item-text-preview {
                     font-size: 17px;
                     font-weight: 600;
+                    @media @mob {
+                        font-size: 14px;
+                    }
                 }
             }
             .project-full-text {
                 font-size: 17px;
                 font-weight: 600;
+                @media @mob {
+                    font-size: 14px;
+                }
                 .inside-project-full-text {
                     border-top: 1px solid #d8d8d8;
                     padding-top: 40px;
@@ -811,6 +909,11 @@ body {
                 margin-top: 20px;
                 display: block;
                 font-size: 17px;
+                @media @mob {
+                    font-size: 14px;
+                    text-align: center;
+                    margin-top: 0;
+                }
             }
         }
     }
@@ -888,13 +991,20 @@ body {
     }
     .textpage {
         padding-right: 15%;
-        font-size: 17px;
+        font-size: 14px;
         margin-bottom: 100px;
         font-weight: 600;
+        @media @mob {
+            padding: 0 16px;
+        }
         .float-menu {
             width: 270px;
             margin: 0 40px 30px 0;
             float: left;
+            @media @mob {
+                margin: 0 0 20px 0;
+                float: none;
+            }
             .title {
                 color: #4a4748;
                 font-weight: 700;
@@ -942,6 +1052,9 @@ body {
             font-size: 22px;
             font-weight: 600;
             color: #4a4748;
+            @media @mob {
+                font-size: 16px;
+            }
         }
         ul {
             padding: 0;
@@ -970,6 +1083,9 @@ body {
             margin-top: 50px;
             margin-bottom: 30px;
             display: block;
+            @media @mob {
+                font-size: 20px;
+            }
         }
         .panel-group {
             .panel {
@@ -998,6 +1114,10 @@ body {
                         font-weight: 600;
                         padding: 28px 15px;
                         position: relative;
+                        @media @mob {
+                            padding: 5px 0;
+                            font-size: 14px;
+                        }
                         &:hover, &:focus {
                             text-decoration: none;
                             outline: none;
@@ -1016,12 +1136,18 @@ body {
                 .panel-body {
                     border-top: none;
                     padding: 0 30px 30px 30px;
+                    @media @mob {
+                        padding: 0 15px 15px;
+                    }
                 }
             }
         }
         .text-with-img-block {
             padding: 40px 30px;
             margin-bottom: 20px;
+            @media @mob {
+                padding: 20px 16px;
+            }
             .text-block {
                 width: 100%;
                 padding-left: 0;
@@ -1075,12 +1201,20 @@ body {
             width: 20%;
             display: inline-block;
             margin: 0 2%;
+            @media @mob {
+                width: 45%;
+                margin-bottom: 20px;
+            }
             .icon-block-item-img {
                 width: 140px;
                 height: 140px;
                 overflow: hidden;
                 border-radius: 50%;
                 margin: 0 auto 15px;
+                @media @mob {
+                    width: 100px;
+                    height: 100px;
+                }
                 img {
                     width: 100%;
                     height: 100%;
@@ -1110,16 +1244,36 @@ body {
         .block-with-quote-left {
             width: 140px;
             text-align: center;
+            @media @mob {
+                width: 100%;
+                display: table-footer-group;
+            }
             .quote-left-img {
                 width: 140px;
                 height: 140px;
                 border-radius: 50%;
                 overflow: hidden;
                 margin-bottom: 20px;
+                @media @mob {
+                    width: 100px;
+                    height: 100px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-bottom: 0;
+                    margin-top: 15px;
+                }
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                }
+            }
+            .quote-left-desc {
+                @media @mob {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: ~"calc(100% - 100px)";
+                    margin-top: 15px;
                 }
             }
             .quote-left-text {
@@ -1138,12 +1292,21 @@ body {
             color: #4a4748;
             width: ~"calc(100% - 140px)";
             padding-left: 60px;
+            @media @mob {
+                width: 100%;
+                display: table-header-group;
+                padding-left: 0;
+            }
         }
     }
     .gallery-block {
         border: 2px solid #e0dfdf;
         padding: 35px;
         letter-spacing: -0.3em;
+        @media @mob {
+            border: none;
+            padding: 0;
+        }
         .gallery-block-left, .gallery-block-right {
             display: inline-block;
             vertical-align: top;
@@ -1151,16 +1314,29 @@ body {
         }
         .gallery-block-left {
             width: 70%;
+            @media @mob {
+                width: 100%;
+                margin-bottom: 10px;
+            }
         }
         .gallery-block-right {
             width: 30%;
             padding-left: 3.4%;
+            @media @mob {
+                width: 100%;
+                padding-left: 0;
+            }
             .carousel-navigation-block {
                 font-size: 18px;
                 font-weight: 600;
                 margin-bottom: 10px;
                 span {
                     opacity: .4;
+                }
+                @media @mob {
+                    border-bottom: 1px solid #e1e0e0;
+                    padding-bottom: 10px;
+                    font-size: 14px;
                 }
             }
             .carousel-text {
@@ -1220,9 +1396,15 @@ body {
             }
             .carousel-stage {
                 height: 440px;
+                @media @mob {
+                    height: 200px;
+                }
                 ul {
                     li {
                         height: 440px;
+                        @media @mob {
+                            height: 200px;
+                        }
                     }
                 }
             }
@@ -1543,6 +1725,9 @@ body {
     }
     .object-block-list {
         padding-right: 15%;
+        @media @mob {
+            padding: 0 16px;
+        }
         ul {
             margin: 0;
             padding: 0;
@@ -1551,6 +1736,11 @@ body {
             -webkit-column-count: 4; 
             column-count: 4;
             margin-bottom: 65px;
+            @media @mob {
+                -moz-column-count: 2; 
+                -webkit-column-count: 2; 
+                column-count: 2;
+            }
             li {
                 a {
                     font-size: 17px;
@@ -1618,10 +1808,10 @@ body {
                     }
                     @media @mob {
                         width: 47%;
-                        margin-right: 3%;
+                        margin-right: 3%!important;
                         margin-bottom: 10px;
                         &:nth-child(2n) {
-                            margin-right: 0;
+                            margin-right: 0!important;
                         }
                     }
                     &:nth-child(6n) {
@@ -1632,15 +1822,24 @@ body {
         }
         &.full {
             padding-right: 15%;
+            @media @mob {
+                padding-right: 0;
+            }
             .object-block-carousel {
                 ul {
                     li {
                         margin-bottom: 30px;
                         &:nth-child(5n) {
                             margin-right: 0;
+                            @media @mob {
+                                margin-right: inherit;
+                            }
                         }
                         &:nth-child(6n) {
                             margin-right: 32px;
+                            @media @mob {
+                                margin-right: inherit;
+                            }
                         }
                     }
                 }

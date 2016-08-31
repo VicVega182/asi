@@ -21,6 +21,52 @@ and open the template in the editor.
     </head>
     <body>
         <header class="header">
+            <div class="mobile-header hidden-md hidden-lg">
+                <div class="logo">
+                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjQ2cHgiIGhlaWdodD0iMzlweCIgdmlld0JveD0iMCAwIDQ2IDM5IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IHNrZXRjaHRvb2wgMzkuMSAoMzE3MjApIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPjgwQkE4OTA3LTVENkYtNDkwMS04NDlGLTcxRDg2MTUxNDY2RjwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggc2tldGNodG9vbC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0i0Lxf0LDRgdC4X9CT0LvQsNCy0L3QsNGPIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTYuMDAwMDAwLCAtMTEuMDAwMDAwKSIgZmlsbD0iIzlFMUEzMiI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik00NC4xNDA0ODUzLDIzLjk0MjUzMjkgTDQ3LjczMTIwNDUsMjMuOTQyNTMyOSBMNDcuNzMxMjA0NSwzMS41NjQ1MzcyIEM0Ny43MzEyMDQ1LDMyLjI0MzY4MDcgNDcuOTgxMTA4OCwzMi44MzIyNTgxIDQ4LjQ4MDkxNzQsMzMuMzMwNjgxOCBDNDguOTgwNTE5MSwzMy44Mjg4OTkyIDQ5LjU3NjExMDUsMzQuMDc4MTExIDUwLjI2ODEwNTQsMzQuMDc4MTExIEw1My4yMTY0Nzk2LDM0LjA3ODExMSBMNTMuMjE2NDc5NiwyNS41MTI0ODUxIEw1My4yMjM1MTMzLDI1LjUxMjQ4NTEgQzUzLjIyMTg1ODMsMjUuNDg3OTM1MiA1My4yMjE2NTE0LDI1LjgzMjA0NTYgNTMuMjIxNjUxNCwyNS40Mzg0MjMgQzUzLjIyMTY1MTQsMjUuMDQ1MDA2NiA1My43OTk4NjU0LDI0LjA0ODc3OCA1NC41NDI5NTgzLDIzLjk2ODUyNjkgQzU0LjU0Mjk1ODMsMjMuOTY4NTI2OSA1NS40ODMyMDI1LDIzLjk3Njk4NTIgNTYuODA3MTk4OCwyMy45Njg1MjY5IEw1Ni44MDc0MDU3LDM3LjAzNTAyNjIgTDQ5LjEzMTMzMDUsMzcuMDM1MDI2MiBDNDcuNzgwNjQ3NSwzNy4wMzUwMjYyIDQ2LjYyMjM1NzYsMzYuNjEzMTQwMiA0NS42NTU4NDA0LDM1Ljc2OTc4MDkgQzQ0LjY0NTY3MjYsMzQuODgyODkyIDQ0LjE0MDQ4NTMsMzMuNzg3ODQ1MyA0NC4xNDA0ODUzLDMyLjQ4NDY0MDYgTDQ0LjE0MDQ4NTMsMjYuODk5NDQ4MSBMNDAuMjc2NDg1LDI2Ljg5OTQ0ODEgQzM5LjI0NDM4ODUsMjYuODk5NDQ4MSAzOC4zNjU1ODYsMjcuMjU1NTI0IDM3LjY0MDY5OCwyNy45NjcyNjMxIEMzNi45MTYyMjM4LDI4LjY3OTAwMjMgMzYuNTUzNzc5OSwyOS40Nzg4MzIgMzYuNTUzNzc5OSwzMC4zNjU3MjA5IEMzNi41NTM3Nzk5LDMxLjQxNzIzODEgMzYuOTA1MDUyNiwzMi4yOTg1NTY5IDM3LjYwODAxMTksMzMuMDEwMDg5NyBDMzguMzEwNzY0MywzMy43MjIwMzUyIDM5LjIwMDMyNDMsMzQuMDc4MTExIDQwLjI3NjQ4NSwzNC4wNzgxMTEgTDQxLjkxOTY4ODQsMzQuMDc4MTExIEM0Mi4yOTk5MjM2LDM0LjE0NDMzMzcgNDIuNTkwNzg5LDM0LjQ3MDcwMjIgNDIuNjAwOTI1OSwzNC44NjY1OTQyIEw0Mi42MDA5MjU5LDM0LjkwOTkxNzUgQzQyLjU5OTY4NDYsMzQuOTQ2MDIwMiA0Mi41OTYzNzQ2LDM0Ljk4MTcxMDMgNDIuNTkwNzg5LDM1LjAxNjE2MjYgTDQyLjYwMDkyNTksMzUuMDE2MTYyNiBMNDIuNjAwOTI1OSwzNy4wMzUwMjYyIEwzOS4xODkzNTk5LDM3LjAzNTAyNjIgQzM3LjM0NDQ1MzksMzcuMDM1MDI2MiAzNS44MTI3NTU3LDM2LjM5NDA0ODQgMzQuNTkzNDM3OSwzNS4xMTI5MTc5IEMzNC40MDg0OTIyLDM0LjkxODM3NTggMzQuMjM4MDI3NywzNC43MTY2MTMzIDM0LjA4MTAxLDM0LjUwODQ1NTQgTDM0LjA4MTAxLDM1LjUyNTEwNzcgTDM0LjA3OTE0ODEsMzUuNTI1MTA3NyBDMzQuMDc5MTQ4MSwzNi4zMTMxNzgzIDMzLjQ2MDU5MzYsMzYuOTU3MDQ0MyAzMi42ODE3MTE1LDM3LjAwMDk4NjUgTDMwLjQ5MDI5MDgsMzcuMDAwOTg2NSBMMzAuNDkwMjkwOCwyOS42NzU2NDM0IEMzMC40OTAyOTA4LDI4LjgyMTU1NjQgMzAuMjA5OTc2LDI4LjA4Nzc0MyAyOS42NTAxNzM4LDI3LjQ3NDYxNTggQzI5LjA4OTc1MSwyNi44NjEyODI0IDI4LjQyMDA5ODUsMjYuNTU0NTEyNSAyNy42NDAzODg5LDI2LjU1NDUxMjUgQzI2LjgyNzU3OTMsMjYuNTU0NTEyNSAyNi4xMzU5OTgxLDI2Ljg1MDM0ODQgMjUuNTY0ODE3OSwyNy40NDE4MTM5IEMyNC45OTQwNTEzLDI4LjAzMjg2NjkgMjQuNzA4MzU3OCwyOC43NTA1ODg4IDI0LjcwODM1NzgsMjkuNTkzMzI5MiBMMjQuNzA4MzU3OCwzMS4xMjExOTU5IEwyOS4zMTQwMDI5LDMxLjEyMTE5NTkgQzI5LjY3MTY4ODcsMzEuMTY3NjEzNyAyOS45NTczODIzLDMxLjQ0MjgxOTUgMzAuMDE4NjE3MSwzMS43OTQ1NjMgTDMwLjAxODYxNzEsMzQuMDc4MzE3MyBMMjQuNzUwNTYwMiwzNC4wNzgzMTczIEwyNC43NzIyODIsMzUuNTExMDc5MiBMMjQuNzcxMjQ3NiwzNS41MTEwNzkyIEMyNC43NzEyNDc2LDM2LjMyNzgyNTcgMjQuMTA3Mzg3NiwzNi45ODk4NDYyIDIzLjI4ODc4NTYsMzYuOTg5ODQ2MiBMMjMuMjg4Nzg1NiwzNi45OTg1MTA5IEwyMS4xMzcyOTE2LDM2Ljk5ODUxMDkgTDIxLjExNTc3NjcsMzIuOTIyNDExNyBMMjEuMTE3NDMxNywzMi45MjI0MTE3IEwyMS4xMTc0MzE3LDI5LjgzOTg1OTEgQzIxLjExNzQzMTcsMjguMTA5NjEwOSAyMS43NDg4MTI0LDI2LjYzNjgyNjYgMjMuMDExNTczOCwyNS40MjEwOTM3IEMyNC4yNzQ3NDksMjQuMjA1NTY3IDI1LjgxMjAzMjgsMjMuNTk3ODAzNiAyNy42MjM4Mzg5LDIzLjU5NzgwMzYgQzI5LjQxMzcxNjMsMjMuNTk3ODAzNiAzMC45Mzc1NTMzLDI0LjIwODQ1NTIgMzIuMTk1MTQyOCwyNS40MjkzNDU3IEMzMi43OTExNDgsMjYuMDA4MDIwNiAzMy4yNDU4NTgsMjYuNjQ0MDQ3MiAzMy41NTk0Nzk2LDI3LjMzNzQyNTUgQzMzLjg1ODQxMzEsMjYuODE3OTU5MSAzNC4yNDE1NDQ1LDI2LjMyNzM3NDggMzQuNzA4ODczOCwyNS44NjQ4NDc1IEMzNi4wMDQ3MzUyLDI0LjU4MzMwNDUgMzcuNTA4OTE5LDIzLjk0Mjk0NTUgMzkuMjIyMDQ2MSwyMy45NDI5NDU1IEw0NC4xNDA0ODUzLDIzLjk0Mjk0NTUgTDQ0LjE0MDQ4NTMsMjMuOTQyNTMyOSBaIE0xOC44OTA2NTYyLDMwLjMxNjM1MyBDMTguODkwNjU2MiwyOC4wOTAzNjMgMTkuMjgzOTI0NSwyNS45NjA1MDk0IDE5Ljk3NDA1NzUsMjMuOTY4NDY1IEwxNi45MjMwNzM2LDIzLjk2ODQ2NSBDMTYuMzI1ODI3MiwyNS45ODEzNDU4IDE2LDI4LjExMDU4MDUgMTYsMzAuMzE2MzUzIEMxNiwzOC43Njk5NTc0IDIwLjcwOTI4OTIsNDYuMTI1NDIwNSAyNy42NTM0NDI2LDQ5LjkyMDEyNDkgTDI5LjA5ODY2NzMsNDcuNDIzODgwMyBDMjMuMDE4MjE0NSw0NC4xMjg0MjQ5IDE4Ljg5MDY1NjIsMzcuNzAyOTY3NiAxOC44OTA2NTYyLDMwLjMxNjM1MyBaIE01OC43NzQ5NDY4LDMwLjU4NzI2NzggQzU4Ljc3OTI5MTIsMzIuODEzMDUxNCA1OC4zODk5NTM2LDM0Ljk0MzkzNjYgNTcuNzAzNTQ0MiwzNi45MzcwMTI1IEw2MC43NTQ3MzUsMzYuOTMxNDQyNCBDNjEuMzQ4MDUwOCwzNC45MTc1MyA2MS42Njk5NDc0LDMyLjc4Nzg4MjcgNjEuNjY1NjAzLDMwLjU4MTkwMzkgQzYxLjY0OTg4MDYsMjIuMTI4Mjk5NSA1Ni45MjY1MjM5LDE0Ljc4MTcwNzQgNDkuOTc1MzM2NywxMSBMNDguNTM0ODcwMiwxMy40OTg5MjY1IEM1NC42MjEzMjIzLDE2Ljc4MzAzNTMgNTguNzYxMDg2MywyMy4yMDA2NTMyIDU4Ljc3NDk0NjgsMzAuNTg3MjY3OCBaIiBpZD0iQ29tYmluZWQtU2hhcGUiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==" alt="" />
+                </div>
+                <div class="mobile-header-info text-right">
+                    <a href="#" class="language">Briefly in english</a>
+                    <a class="btn-collapse-mob collapsed" role="button" data-toggle="collapse" href="#phones-mobile" aria-expanded="false" aria-controls="phones-mobile">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn-collapse-mob collapsed" role="button" data-toggle="collapse" href="#menu-mobile" aria-expanded="false" aria-controls="menu-mobile">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="collapse collapse-mobile" id="phones-mobile">
+                <div class="inside-collapse-mobile">
+                    <div>
+                        <a href="tel:+78126221457">+7 812 622-14-57</a><span>Санкт-Петербург</span>
+                    </div>
+                    <div>
+                        <a href="tel:+74996854027">+7 499 685-40-27</a><span>Москва</span>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse collapse-mobile" id="menu-mobile">
+                <div class="inside-collapse-mobile">
+                    <nav class="navbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Агентство</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Инструментарий</a></li>
+                            <li><a href="#">Портфолио</a></li>
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="red-btn">Отправить заявку</a>
+                </div>
+                <div class="mobile-search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <form action="">
+                        <input type="text" placeholder='Поиск по сайту' />
+                        <input type="submit" class="gray-btn" value='Искать'/>
+                    </form>
+                </div>
+            </div>
             <div class="container">
                 <div class="language text-right hidden-xs"><a href="#">Briefly in english</a></div>
                 <div class="info-block hidden-xs">
@@ -143,7 +189,7 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
-                <div class="second-menu">
+                <div class="second-menu hidden-xs">
                     <nav>
                         <ul>
                             <li><a href="#" class="active">Проекты</a></li>

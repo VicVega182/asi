@@ -495,17 +495,26 @@ body {
         @media @tab {
             padding: 60px 0 60px 0;
         }
+        @media @mob {
+            padding: 50px 0;
+        }
         .big {
             font-size: 36px;
             font-weight: 700;
             line-height: 1.2;
             color: #ffffff;
+            @media @mob {
+                font-size: 22px;
+            }
         }
         .small {
             font-size: 24px;
             font-weight: 600;
             line-height: 1.3;
             color: #ffffff;
+            @media @mob {
+                font-size: 18px;
+            }
             a {
                 font-weight: 700;
                 color: #fff;
@@ -559,6 +568,12 @@ body {
 /* Wrapper start */
 
 .wrapper {
+    .container {
+        @media @mob {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
     .breadcrumb {
         background: none;
         margin-bottom: 0;
@@ -802,6 +817,9 @@ body {
     .service-block {
         letter-spacing: -0.3em;
         padding: 20px 0;
+        @media @mob {
+            padding-top: 0;
+        }
         .service-block-item {
             letter-spacing: normal;
             display: inline-block;
@@ -810,6 +828,10 @@ body {
             margin-right: 1.73%;
             text-align: center;
             background-size: cover!important;
+            @media @mob {
+                width: 50%;
+                margin-right: 0;
+            }
             &.main {
                 &:nth-child(1) {
                     background: url('../images/main-service-item-1.png') no-repeat transparent;
@@ -848,6 +870,10 @@ body {
                 @media @tab {
                     font-size: 14px;
                     padding: 13% 0;
+                }
+                @media @mob {
+                    font-size: 13px;
+                    padding: 10% 0;
                 }
                 &:hover {
                     text-decoration: none;
@@ -1275,6 +1301,13 @@ body {
         background-position: center;
         padding: 30px;
         letter-spacing: -0.3em;
+        @media @mob {
+            margin: 0 16px;
+            border-radius: 20px;
+            background: #9e1a33;
+            text-align: center;
+            padding: 20px;
+        }
         & > div {
             letter-spacing: normal;
             display: inline-block;
@@ -1293,6 +1326,11 @@ body {
             line-height: 10px;
             @media @tab {
                 line-height: 27px;
+            }
+            @media @mob {
+                width: 100%;
+                line-height: 27px;
+                font-size: 18px;
             }
             p {
                 letter-spacing: 2px;
@@ -1314,8 +1352,15 @@ body {
             font-size: 24px;
             font-weight: 700;
             letter-spacing: 2px;
+            @media @mob {
+                width: 100%;
+                font-size: 18px;
+            }
             .white-full-btn {
                 color: #9e1a33;
+                @media @mob {
+                    margin-top: 20px;
+                }
             }
         }
     }
@@ -1334,6 +1379,10 @@ body {
                 width: 100%;
                 margin-bottom: 20px;
             }
+            @media @mob {
+                width: 100%;
+                margin-bottom: 20px;
+            }
             & > div {
                 letter-spacing: normal;
                 display: inline-block;
@@ -1343,6 +1392,10 @@ body {
             .blog-part-img {
                 width: 180px;
                 height: 180px;
+                @media @mob {
+                    width: 100%;
+                    margin-bottom: 17px;
+                }
                 img {
                     width: 100%;
                     height: 100%;
@@ -1351,7 +1404,11 @@ body {
             }
             .blog-part-description {
                 width: ~"calc(100% - 180px)";
-                padding: 0px 15% 0 5%; 
+                padding: 0px 15% 0 5%;
+                @media @mob {
+                    width: 100%;
+                    padding: 0px 16px;
+                }
                 .blog-part-desc-date {
                     color: #4a4748;
                     opacity: 0.4;
@@ -1366,6 +1423,9 @@ body {
                         font-size: 24px;
                         line-height: 1.2;
                         color: #4a4748;
+                        @media @mob {
+                            font-size: 18px;
+                        }
                     }
                 }
                 .gray-btn {
@@ -1381,15 +1441,28 @@ body {
             @media @tab {
                 width: 100%;
             }
+            @media @mob {
+                width: 100%;
+                border-left: none;
+                border-right: none;
+                border-bottom: none;
+                padding: 25px 16px;
+            }
             .subscribe-part-title {
                 font-size: 24px;
                 color: #4a4748;
+                @media @mob {
+                    font-size: 18px;
+                }
             }
             .subscribe-part-quote {
                 opacity: 0.4;
                 line-height: 1.4;
                 color: #4a4748;
                 margin: 5px 0 15px;
+                @media @mob {
+                    font-size: 12px;
+                }
             }
             form {
                 position: relative;
@@ -1415,6 +1488,9 @@ body {
         padding: 45px 40px;
         letter-spacing: -0.3em;
         margin-bottom: 60px;
+        @media @mob {
+            padding: 25px 16px;
+        }
         & > div {
             display: inline-block;
             vertical-align: top;
@@ -1429,23 +1505,39 @@ body {
                 height: 100%;
                 object-fit: cover;
             }
+            @media @mob {
+                margin: 0 auto 20px;
+                display: block;
+            }
         }
         .text-block {
             width: ~"calc(100% - 185px)";
             padding-left: 4%;
+            @media @mob {
+                width: 100%;
+            }
             .text-block-title {
                 font-size: 24px;
                 font-weight: 700;
                 color: #4a4748;
+                @media @mob {
+                    font-size: 18px;
+                }
             }
             .text-block-text {
                 font-weight: 600;
                 font-size: 17px;
                 color: #4a4748;
                 margin: 15px 0;
+                @media @mob {
+                    font-size: 14px;
+                }
             }
             .red-link {
                 font-size: 17px;
+                @media @mob {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -1487,15 +1579,26 @@ body {
             @media @tab {
                 font-size: 30px;
             }
+            @media @mob {
+                font-size: 18px;
+                text-align: center;
+            }
             span {
                 font-size: 72px;
                 color: #cd3050;
                 @media @tab {
                     font-size: 64px;
                 }
+                @media @mob {
+                    font-size: 48px;
+                    display: block;
+                }
             }
         }
         .object-block-carousel {
+            @media @mob {
+                padding: 0 16px;
+            }
             ul {
                 padding: 0;
                 margin: 0;
@@ -1512,6 +1615,14 @@ body {
                     @media @tab {
                         width: 90px;
                         height: 90px;
+                    }
+                    @media @mob {
+                        width: 47%;
+                        margin-right: 3%;
+                        margin-bottom: 10px;
+                        &:nth-child(2n) {
+                            margin-right: 0;
+                        }
                     }
                     &:nth-child(6n) {
                         margin-right: 0;

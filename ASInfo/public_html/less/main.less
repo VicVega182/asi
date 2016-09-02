@@ -32,7 +32,7 @@
         url('../fonts/solomon_sans_normal_italic-s.woff') format('woff'),
         url('../fonts/solomon_sans_normal_italic-s.ttf') format('truetype'),
         url('../fonts/solomon_sans_normal_italic-s.svg#solomon_sans_normal_italicRg') format('svg');
-    font-weight: 300;
+    font-weight: 400;
     font-style: italic;
 
 }
@@ -46,6 +46,28 @@
         url('../fonts/solomon_sans_normal-s.svg#solomon_sans_normalregular') format('svg');
     font-weight: 400;
     font-style: normal;
+}
+@font-face {
+    font-family: 'solomon';
+    src: url('../fonts/solomon_sans_light-webfont.eot');
+    src: url('../fonts/solomon_sans_light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/solomon_sans_light-webfont.woff2') format('woff2'),
+        url('../fonts/solomon_sans_light-webfont.woff') format('woff'),
+        url('../fonts/solomon_sans_light-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'solomon_sans_semiboldregular';
+    src: url('../fonts/solomon_sans_semibold-webfont.eot');
+    src: url('../fonts/solomon_sans_semibold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/solomon_sans_semibold-webfont.woff2') format('woff2'),
+        url('../fonts/solomon_sans_semibold-webfont.woff') format('woff'),
+        url('../fonts/solomon_sans_semibold-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+
 }
 
 /* Fonts end */
@@ -81,6 +103,7 @@ body {
     border: none;
     line-height: 1.6;
     &:hover, &:focus {
+        background: #CD3050;
         color: #fff;
         text-decoration: none;
     }
@@ -157,10 +180,34 @@ body {
 
 .header {
     background: url('../images/header.png') no-repeat transparent;
+    position: relative;
+    .container {
+        position: relative;
+    }
+    .videobg {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
     .mobile-header {
         padding: 10px 16px;
         background: #fff;
         letter-spacing: -0.3em;
+        border-bottom: 1px solid #e1e1e1;
+        position: relative;
+        z-index: 2;
+        display: none;
+        @media @mob {
+            display: block;
+        }
         & > div {
             display: inline-block;
             vertical-align: middle;
@@ -208,8 +255,8 @@ body {
         .inside-collapse-mobile {
             padding: 10px 16px;
             background: #fff;
-            border-top: 1px solid #e3e3e3;
             position: relative;
+            z-index: 2;
             &:before {
                 content: '';
                 background: url('../images/mobile-menu-arrow.png') no-repeat transparent;
@@ -322,12 +369,12 @@ body {
         }
     }
     .language {
-        padding: 10px 0;
+        padding: 10px 20px;
         a {
             font-size: 12px;
             color: #fff;
             text-decoration: underline;
-            font-weight: 700;
+            font-weight: 400;
             &:hover {
                 text-decoration: none;
             }
@@ -416,6 +463,7 @@ body {
             padding: 30px 20px 40px;
             left: 0;
             display: none;
+            z-index: 1;
             & > div {
                 padding-left: 20px;
                 padding-right: 20px;
@@ -460,6 +508,7 @@ body {
             width: 100%;
             left: 0;
             display: none;
+            z-index: 1;
             &.in {
                 display: block;
             }
@@ -577,7 +626,7 @@ body {
     .breadcrumb {
         background: none;
         margin-bottom: 0;
-        padding: 25px 0;
+        padding: 25px 20px;
         color: #c4c2c3;
         @media @mob {
             padding: 16px;
@@ -595,7 +644,7 @@ body {
     }
     .title {
         h1 {
-            margin: 0 0 35px 0;
+            margin: 0 20px 35px 20px;
             padding: 0;
             font-size: 40px;
             font-weight: 700;
@@ -604,6 +653,7 @@ body {
             @media @mob {
                 padding: 0 16px;
                 font-size: 30px;
+                margin: 0 0 20px;
             }
         }
     }
@@ -612,7 +662,10 @@ body {
         line-height: 1.5;
         color: #4a4748;
         margin-bottom: 25px;
-        padding-right: 15%;
+        padding: 0 15% 0 20px;
+        @media @tab {
+            padding-right: 20px;
+        }
         @media @mob {
             padding-right: 0;
             font-size: 14px;
@@ -643,6 +696,13 @@ body {
                 text-align: left;
             }
         }
+        &.open {
+            button {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+        }
         .dropdown-menu {
             min-width: 220px;
             max-height: 250px;
@@ -668,6 +728,9 @@ body {
     .blog-page {
         letter-spacing: -0.3em;
         margin-bottom: 100px;
+        @media @mob {
+            margin-bottom: 30px;
+        }
         & > div {
             letter-spacing: normal;
             display: inline-block;
@@ -677,7 +740,7 @@ body {
             display: none;
             @media @mob {
                 display: block;
-                padding: 0 16px 16px;
+                padding: 0 16px 25px;
                 .dropdown {
                     button {
                         border: 1px solid #e1e0e0;
@@ -687,7 +750,7 @@ body {
         }
         .blog-left {
             width: 67.5%;
-            padding-right: 4.5%;
+            padding: 0 4.5% 0 20px;
             box-sizing: border-box;
             @media @mob {
                 width: 100%;
@@ -697,6 +760,9 @@ body {
                 margin-bottom: 40px;
                 padding-bottom: 40px;
                 border-bottom: 1px solid #e0dfdf;
+                &:last-child {
+                    border-bottom: none;
+                }
                 @media @mob {
                     margin-bottom: 20px;
                     padding-bottom: 20px;
@@ -737,12 +803,13 @@ body {
                         margin-top: 15px;
                     }
                     .blog-item-body-img {
+                        margin-bottom: 25px;
                         img {
                             width: 100%;
                         }
                     }
                     .blog-item-body-title {
-                        padding: 15px 0;
+                        padding: 0px 0 15px;
                         a {
                             font-size: 22px;
                             font-weight: 700;
@@ -808,8 +875,10 @@ body {
     .filter-block {
         letter-spacing: -0.3em;
         margin-bottom: 40px;
+        padding: 0 20px;
         @media @mob {
             background: #f5f5f5;
+            padding: 0;
             .title {
                 font-size: 14px;
                 font-weight: 700;
@@ -828,9 +897,13 @@ body {
         }
     }
     .project-list {
-        padding-right: 15%;
+        padding: 0 15% 0 20px;
+        @media @tab {
+            padding-right: 20px;
+        }
         @media @mob {
             padding: 0 16px;
+            margin-bottom: 50px;
         }
         .project-item {
             border: 2px solid #dcdbdb;
@@ -862,10 +935,14 @@ body {
                 }
             }
             .project-item-text {
+                @media @mob {
+                    text-align: center;
+                }
                 .project-item-text-title {
                     font-size: 22px;
                     color: #4a4748;
                     @media @mob {
+                        font-size: 18px;
                         text-align: center;
                     }
                 }
@@ -888,16 +965,20 @@ body {
                 .project-item-text-preview {
                     font-size: 17px;
                     font-weight: 600;
+                    line-height: 26px;
                     @media @mob {
                         font-size: 14px;
+                        line-height: 23px;
                     }
                 }
             }
             .project-full-text {
                 font-size: 17px;
                 font-weight: 600;
+                line-height: 26px;
                 @media @mob {
                     font-size: 14px;
+                    line-height: 23px;
                 }
                 .inside-project-full-text {
                     border-top: 1px solid #d8d8d8;
@@ -909,10 +990,17 @@ body {
                 margin-top: 20px;
                 display: block;
                 font-size: 17px;
+                text-decoration: none;
+                border-bottom: 1px dotted;
+                line-height: 1;
+                display: inline-block;
+                &:hover {
+                    border-bottom: none;
+                }
                 @media @mob {
                     font-size: 14px;
                     text-align: center;
-                    margin-top: 0;
+                    margin: 0 auto;
                 }
             }
         }
@@ -931,6 +1019,7 @@ body {
             margin-right: 1.73%;
             text-align: center;
             background-size: cover!important;
+            transition-duration: 1s;
             @media @mob {
                 width: 50%;
                 margin-right: 0;
@@ -990,17 +1079,24 @@ body {
         }
     }
     .textpage {
-        padding-right: 15%;
-        font-size: 14px;
+        padding: 0 15% 0 20px;
+        font-size: 17px;
         margin-bottom: 100px;
         font-weight: 600;
+        @media @tab {
+            padding-right: 20px;
+        }
         @media @mob {
             padding: 0 16px;
+            font-size: 14px;
         }
         .float-menu {
             width: 270px;
             margin: 0 40px 30px 0;
             float: left;
+            @media @tab {
+                float: none;
+            }
             @media @mob {
                 margin: 0 0 20px 0;
                 float: none;
@@ -1038,6 +1134,9 @@ body {
                             color: #cd3050;
                             text-decoration: none;
                         }
+                        i {
+                            margin-left: 5px;
+                        }
                     }
                     &.active {
                         a {
@@ -1045,25 +1144,56 @@ body {
                             color: #cd3050;
                         }
                     }
+                    ul {
+                        display: none;
+                        padding-left: 10px;
+                        li {
+                            border-bottom: 0;
+                            a {
+                                text-transform: none;
+                                color: #4a4748!important;
+                                &:hover, &:focus {
+                                    outline: none;
+                                    color: #cd3050!important;
+                                    text-decoration: none;
+                                }
+                            }
+                            &.active {
+                                a {
+                                    font-weight: 400;
+                                    color: #cd3050!important;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
         div.lead {
             font-size: 22px;
-            font-weight: 600;
+            font-weight: 300;
             color: #4a4748;
+            margin-bottom: 40px;
+            line-height: 32px;
             @media @mob {
                 font-size: 16px;
+                line-height: 26px;
             }
         }
         ul {
             padding: 0;
-            margin: 0;
+            margin: 0 0 20px 0;
             list-style: none;
+            @media @mob {
+                margin-bottom: 14px;
+            }
             li {
                 position: relative;
                 padding-left: 30px;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
+                @media @mob {
+                    margin-bottom: 10px;
+                }
                 &:before {
                     content: '';
                     width: 20px;
@@ -1075,7 +1205,16 @@ body {
             }
         }
         p {
-            margin-bottom: 20px;
+            margin-bottom: 28px;
+            &.title-p {
+                margin-bottom: 18px;
+                @media @mob {
+                    margin-bottom: 12px;
+                }
+            }
+            @media @mob {
+                margin-bottom: 22px;
+            }
         }
         h2 {
             font-size: 30px;
@@ -1088,6 +1227,7 @@ body {
             }
         }
         .panel-group {
+            margin-bottom: 25px;
             .panel {
                 border: 2px solid #dbdada;
                 border-radius: 0;
@@ -1126,10 +1266,13 @@ body {
                         span {
                             position: absolute;
                             right: 0;
-                            font-weight: 400;
                             font-size: 30px;
                             top: 50%;
                             margin-top: -16px;
+                            @media @mob {
+                                font-size: 20px;
+                                margin-top: -11px;
+                            }
                         }
                     }
                 }
@@ -1189,6 +1332,14 @@ body {
                             background: #cd3050;
                             color: #fff;
                             opacity: 1;
+                        }
+                    }
+                    .mob-download {
+                        color: #4a4748;
+                        text-decoration: none;
+                        &:hover {
+                            color: #4a4748;
+                            text-decoration: none;
                         }
                     }
                 }
@@ -1274,6 +1425,8 @@ body {
                     vertical-align: middle;
                     width: ~"calc(100% - 100px)";
                     margin-top: 15px;
+                    text-align: left;
+                    padding-left: 16px;
                 }
             }
             .quote-left-text {
@@ -1484,7 +1637,7 @@ body {
         padding: 30px;
         letter-spacing: -0.3em;
         @media @mob {
-            margin: 0 16px;
+            margin: 40px 16px 0;
             border-radius: 20px;
             background: #9e1a33;
             text-align: center;
@@ -1549,6 +1702,9 @@ body {
     .blog-block {
         letter-spacing: -0.3em;
         margin: 60px 0;
+        @media @mob {
+            margin-bottom: 30px;
+        }
         & > div {
             display: inline-block;
             vertical-align: middle;
@@ -1559,11 +1715,11 @@ body {
             letter-spacing: -0.3em;
             @media @tab {
                 width: 100%;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
             }
             @media @mob {
                 width: 100%;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
             }
             & > div {
                 letter-spacing: normal;
@@ -1656,6 +1812,10 @@ body {
                         padding: 9px 15px;
                         width: 75%;
                         font-weight: 600;
+                        &:focus {
+                            outline: none;
+                            border-color: #4a4748;
+                        }
                     }
                 }
                 .red-btn {
@@ -1724,7 +1884,10 @@ body {
         }
     }
     .object-block-list {
-        padding-right: 15%;
+        padding: 0 15% 0 20px;
+        @media @tab {
+            padding-right: 20px;
+        }
         @media @mob {
             padding: 0 16px;
         }
@@ -1749,6 +1912,9 @@ body {
                     font-weight: 600;
                     display: block;
                     padding: 5px 0;
+                    @media @mob {
+                        font-size: 14px;
+                    }
                     &:hover, &:focus {
                         background: none;
                         outline: none;
@@ -1821,28 +1987,45 @@ body {
             }
         }
         &.full {
-            padding-right: 15%;
+            padding: 20px 15% 0 20px;
+            margin-bottom: 20px;
+            @media @tab {
+                padding-right: 20px;
+            }
             @media @mob {
-                padding-right: 0;
+                padding: 0;
             }
             .object-block-carousel {
                 ul {
                     li {
                         margin-bottom: 30px;
-                        &:nth-child(5n) {
-                            margin-right: 0;
-                            @media @mob {
-                                margin-right: inherit;
-                            }
+                        margin-right: 2%;
+                        @media @mob {
+                            margin-bottom: 13px;
                         }
-                        &:nth-child(6n) {
-                            margin-right: 32px;
-                            @media @mob {
-                                margin-right: inherit;
-                            }
-                        }
+                        /*                        &:nth-child(5n) {
+                                                    margin-right: 0;
+                                                    @media @mob {
+                                                        margin-right: inherit;
+                                                    }
+                                                }
+                                                &:nth-child(6n) {
+                                                    margin-right: 32px;
+                                                    @media @mob {
+                                                        margin-right: inherit;
+                                                    }
+                                                }*/
                     }
                 }
+            }
+        }
+    }
+    .reviews-page {
+        padding: 0 20px;
+        @media @mob {
+            padding: 0 16px;
+            .text-with-img-block {
+                margin-bottom: 20px;
             }
         }
     }
@@ -1858,7 +2041,7 @@ body {
     background: #4a4748;
     .first-line {
         letter-spacing: -0.3em;
-        padding: 25px 0;
+        padding: 25px 20px;
         & > div {
             display: inline-block;
             vertical-align: middle;
@@ -1957,6 +2140,7 @@ body {
     }
     .second-line {
         letter-spacing: -0.3em;
+        padding: 0 20px;
         @media @mob {
             margin-bottom: 10px;
         }

@@ -34,6 +34,20 @@ $(document).ready(function () {
     var $parent = $this.parent(".panel");
     $parent.removeClass('panel-active');
     $parent.find('.panel-heading a span').text('+');
+}).on('click', document, function (e) {
+    var search = $('#searchCollapse');
+    var submenu = $('#submenu');
+    if (!search.is(e.target) // если клик был не по нашему блоку
+            && search.has(e.target).length === 0 && search.css('display') != 'none') { // и не по его дочерним элементам и то что не открыт
+        search.collapse('hide'); // скрываем его
+    }
+    if (!submenu.is(e.target) // если клик был не по нашему блоку
+            && submenu.has(e.target).length === 0 && submenu.css('display') != 'none') { // и не по его дочерним элементам и то что не открыт
+        submenu.collapse('hide'); // скрываем его
+    }
+}).on('click', '.float-menu .parent', function() {
+    var $this = $(this);
+    $this.find('ul').toggle();
 });
 
 (function ($) {
@@ -52,8 +66,8 @@ $(document).ready(function () {
             var carousel = $(this),
                     width = carousel.innerWidth();
             carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
-        }).jcarousel({wrap: 'circular'});
-        var carouselNavigation = $('.carousel-navigation').jcarousel({wrap: 'circular'});
+        }).jcarousel({wrap: 'circular'}).jcarouselSwipe();
+        var carouselNavigation = $('.carousel-navigation').jcarousel({wrap: 'circular'}).jcarouselSwipe();
 
         // We loop through the items of the navigation carousel and set it up
         // as a control for an item from the stage carousel.

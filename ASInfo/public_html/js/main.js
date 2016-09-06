@@ -48,6 +48,23 @@ $(document).ready(function () {
 }).on('click', '.float-menu .parent', function() {
     var $this = $(this);
     $this.find('ul').toggle();
+}).on('show.bs.collapse', '.collapse-mobile', function() {
+    var $this = $(this);
+    var opened = $('.collapse-mobile').not($this);
+    if (opened.hasClass('in')) {
+        opened.collapse('hide');
+    }
+    $('.dark-open-menu').show();
+}).on('hide.bs.collapse', '.collapse-mobile', function () {
+    $('.dark-open-menu').hide();
+}).on('click', '.inside-collapse-mobile .parent', function(e) {
+    e.preventDefault;
+    var $this = $(this);
+    $this.find('ul.second-level').toggle();
+}).on('click', '.inside-collapse-mobile .second-parent', function(e) {
+    e.preventDefault;
+    var $this = $(this);
+    $this.find('ul.third-level').toggle();
 });
 
 (function ($) {

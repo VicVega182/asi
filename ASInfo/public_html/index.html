@@ -49,7 +49,21 @@ and open the template in the editor.
                     <nav class="navbar">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#">Агентство</a></li>
-                            <li><a href="#">Услуги</a></li>
+                            <li class="parent">
+                                <a href="#">Услуги<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="second-level">
+                                    <li class="second-parent">
+                                        <a href="#">Второй уровень 1<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="third-level">
+                                            <li><a href="#">Третий уровень 1</a></li>
+                                            <li><a href="#">Третий уровень 2</a></li>
+                                            <li><a href="#">Третий уровень 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Второй уровень 2</a></li>
+                                    <li><a href="#">Второй уровень 3</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#">Инструментарий</a></li>
                             <li><a href="#">Портфолио</a></li>
                             <li><a href="#">Блог</a></li>
@@ -198,6 +212,7 @@ and open the template in the editor.
             </div>
         </header>
         <div class="wrapper">
+            <div class="dark-open-menu"></div>
             <div class="container">
                 <div class="service-block">
                     <div class="service-block-item main">
